@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>RESTAURANT MANAGEMENT</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            body{
+                background-image: url("restaurent.webp")
+            }
+             a{
+               margin:10%;
+               color:white;
+           }
+            h1{
+                color:white;
+            padding-top: 20%;
+        
+           }
+           
+        </style>
+    </head>
+    <body>
+    <center>
+        <h1>DLM RESTAURANT</h1>
+        <a href="login.html">login<a/>
+    </center>
+    </body>
+   
+</html>
