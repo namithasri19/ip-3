@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBQ HOUSE</title>
+    <!-- Internal CSS -->
+    <style>
+        /* Centering website name */
+        h1 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            text-shadow: 2px 2px 4px #000000;
+            
+        }
+        /* Right-aligning signup/login link */
+        .login-button {
+            background-color: #4CAF50;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            position: absolute; /* Position absolutely */
+            top: 20px; /* 20px from the top */
+            right: 20px; /* 20px from the right */
+            cursor: pointer;
+        }
+        /* Styling description */
+        p {
+            font-family: Monotype Corsiva,bold;
+            color: #333;
+             font-size: 30px;
+        }
+        /* Table styling */
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 40px auto;
+        }
+        td, th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        /* Fixed position image */
+        .fixed-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+        }
+        /* Border for table booking form */
+        body {
+            background-image: url("background-image.jpg");
+            background-size: cover; 
+            background-position: center; 
+        }
+        #booking-form {
+            border: 2px solid #ccc;
+            padding: 20px;
+            width: 300px;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            display: none;
+            background-color: #f9f9f9;
+        }
+        /* Form input styling */
+        input[type=text], input[type=email], input[type=tel], input[type=date], input[type=time], input[type=number] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        /* Form button styling */
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px; /* Adjusted padding for a somewhat smaller button */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>BBQ HOUSE</h1>
+    <a href="LOGIN.HTML" class="login-button">Login</a>
+    <center>
+        <p>Welcome to BBQ HOUSE! We offer a delightful dining experience with our exquisite dishes.</p>
+    </center>
+    <table>
+        <tr>
+            <th>Dish</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+        <tr>
+            <td>Special BBQ</td>
+            <td>Barbecue chicken consists of chicken parts or entire chickens that are barbecued, grilled or smoked. There are many global and regional preparation techniques and cooking styles. Barbecue chicken is often seasoned or coated in a spice rub, barbecue sauce, or both. Marinades are also used to tenderize the meat and add flavor. Rotisserie chicken has gained prominence and popularity in U.S. grocery markets. Barbecued chicken is one of the world's most popular barbecue dishes.</td>
+            <td><img src="bbq.jpg" alt="Special BBQ"></td>
+        </tr>
+        <tr>
+            <td>SHAWARMA</td>
+            <td>Made of spit-roasted layers of lamb, beef, or other meat that are sliced and often wrapped in or served with pita.</td>
+            <td><img src="shawarma.jpg" alt="SHAWARMA"></td>
+        </tr>
+        <tr>
+            <td>TANDOORI CHICKEN</td>
+            <td>A dish made from chicken marinated in yogurt and spices and roasted in a tandoori, a cylindrical clay oven.</td>
+            <td><img src="Chicken.jpg" alt="TANDOORI CHICKEN"></td>
+        </tr>
+    </table>
+
+    <!-- Booking Form -->
+    <div id="booking-form">
+        <h2>Table Booking Form</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Fixed Button -->
+    <button class="fixed-button" onclick="toggleLoginForm()">Book Now</button>
+
+    <script>
+        function toggleLoginForm() {
+            var form = document.getElementById("booking-form");
+            form.style.display = (form.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
+
